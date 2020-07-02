@@ -5,7 +5,7 @@
   overflow-y: hidden;
 }
 
-@mixin pad{
+@mixin someair{
   margin: 2rem;
   padding: 1rem;
 }
@@ -24,7 +24,7 @@ body{
 
 
 h2.texto{
-  @include pad;
+  @include  someair;
   width: auto;
   font-weight: bolder;
   font-size: 1.5em;
@@ -32,8 +32,16 @@ h2.texto{
   padding: 2rem;
 }
 
+#logo{
+  @include someair;
+  background: url('./layout/assets/logo.png');
+  width: 300px;
+  height: 200px;
+  background-repeat: no-repeat;
+}
 
 .borda{
+  @include someair;
   color: black;
   width: 300px;
   border: 0.5px solid rgb(116, 216, 15);
@@ -42,8 +50,6 @@ h2.texto{
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  
-  
 }
 
 .borda:focus{
@@ -54,9 +60,29 @@ h2.texto{
   border: none;
 }
 
-#lupa{
+button.buscar{
   border: none;
+  width: 30px;
+  height: 15px;
   background: transparent;
+  border: 0 solid black;
+}
+
+button.buscar:focus{
+  border: none;
+  width: 30px;
+  height: 15px;
+  background: transparent;
+  border: 0 solid;
+}
+
+
+#lupa{
+  background-image: url('./layout/assets/lupa.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
 }
 
 input{
@@ -64,27 +90,40 @@ input{
   font-style: italic;
 }
 
-
-.errorMessage{
-  color: red;
-  font-weight: bold;
-  font-size: 20px;
-  display: none;
+input:focus{
+  border: none;
 }
 
-.sucessMessage{
-  color: blue;
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-.row-sucess{
-  display: none;
-  width: 30rem;
-  height: 10em;
+.row{
+  display: flex;
+  width: 50rem;
+  height: 20em;
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  
+}
+
+.errorMessage{
+  @include someair;
+  display: none;
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.errorMessage2{
+  @include someair;
+  display: none;
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+.sucessMessage{
+  display: none;
+  color: blue;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 

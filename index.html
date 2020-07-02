@@ -3,40 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.css">
   <title>Consulta Encomendas</title>
+  <link rel="stylesheet" href="style.scss">
+
 </head>
 <body>
   <main class="container">
-    <img src="./layout/assets/logo.png" 
-    alt="Consultas Encomendas"
-    class="pad" 
-    id="logo">
+    <div class="pad" id="logo"></div>
     <h2 class="texto">Consulte sua Encomenda:</h2>
     
     <!-- Barra de busca -->
     <div class="borda">
       <input type="text" id="consulta" placeholder=" Digite seu pedido...">
       <button id="buscar">
-        <img src="./layout/assets/lupa.png" alt="Buscar" id="lupa">
+        <div id="lupa"></div>
       </button>
     </div>
 
 
     <!-- Messagens de Sucesso -->
-    <div class="row-sucess">
+    <div class="row">
       <h2 class="sucessMessage cliente"></h2>
       <h2 class="sucessMessage valor"></h2>
     </div>
 
-    <div class="row-sucess">
+    <div class="row">
       <h2 class="sucessMessage data"></h2>
       <h2 class="sucessMessage status"></h2>
     </div>
 
     <!-- Messagens de Erro -->
-    <h4 class="errorMessage pad naoEncontrada">Encomenda não encontrada!</h4>
-    <h4 class="errorMessage pad ProcureNovamente">Procure novamente</h4>
+    <div class="row">
+      <h4 class="errorMessage">Encomenda não encontrada!</h4>
+      <h4 class="errorMessage2">Procure novamente</h4>
+    </div>
     
   </main>>
 
