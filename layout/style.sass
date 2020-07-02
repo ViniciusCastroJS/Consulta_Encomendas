@@ -1,0 +1,90 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  overflow-y: hidden;
+}
+
+@mixin pad{
+  margin: 2rem;
+  padding: 1rem;
+}
+
+body{
+  background-color: white;
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+h2.texto{
+  @include pad;
+  width: auto;
+  font-weight: bolder;
+  font-size: 1.5em;
+  color: rgb(7, 107, 207);
+  padding: 2rem;
+}
+
+
+.borda{
+  color: black;
+  width: 300px;
+  border: 0.5px solid rgb(116, 216, 15);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  
+  
+}
+
+.borda:focus{
+  border: 0.5px solid rgb(116, 216, 15);
+}
+
+#consulta{
+  border: none;
+}
+
+#lupa{
+  border: none;
+  background: transparent;
+}
+
+input{
+  font-size: 1rem;
+  font-style: italic;
+}
+
+
+.errorMessage{
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+  display: none;
+}
+
+.sucessMessage{
+  color: blue;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.row-sucess{
+  display: none;
+  width: 30rem;
+  height: 10em;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  
+}
+
